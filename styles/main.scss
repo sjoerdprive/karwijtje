@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&family=Nunito:ital,wght@0,400;0,500;1,400&display=swap');
+
+
+@import "variables";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "utils";
+
+.term-carousel {
+  width: 300px;
+  display: inline-flex;
+  justify-content: center;
+}
+
+@media not prefers-reduced-motion {
+  .fade-enter {
+    opacity: 0;
+    //   transform: rotateX(90deg);
+  }
+
+  .fade-exit {
+    opacity: 1;
+    //   transform: rotateX(0deg);
+  }
+  .fade-enter-active {
+    opacity: 1;
+    //   transform: rotateX(0deg);
+  }
+  .fade-exit-active {
+    opacity: 0;
+    //   transform: rotateX(90deg);
+  }
+  .fade-enter-active,
+  .fade-exit-active {
+    transition: all 200ms linear;
+  }
+}
