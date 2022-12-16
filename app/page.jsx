@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Page() {
   return (
-    <main>
+    <main className="my-5">
       <section className="container py-5 my-2 my-md-5">
         <div className="row">
           <div className="col-12 col-md-6">

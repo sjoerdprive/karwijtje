@@ -1,5 +1,8 @@
+"use client";
 import Header from "#/partials/Header";
 import Footer from "#/partials/Footer";
+import { AuthProvider } from "#/supabase/auth";
+import { supabase } from "#/supabase/index";
 
 import "#/styles/main.scss";
 
@@ -16,9 +19,14 @@ export default function Layout({ children }) {
         />
       </head>
       <body>
-        <Header />
-        {children}
-        <Footer/>
+        <AuthProvider supabase={supabase}>
+          <a href="#content" className="visually-hidden-focusable">
+            Ga naar inhoud
+          </a>
+          <Header />
+          <div id="content">{children}</div>
+          <Footer />
+        </AuthProvider>
       </body>
     </html>
   );
